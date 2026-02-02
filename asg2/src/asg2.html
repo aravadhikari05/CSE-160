@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blocky 3D Animal</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id = "fps"></p>
+    <p>
+      Camera Angle <input type="range" min="0" max="360" value="0" class="slider" id="cameraSlide">
+
+    <p>
+      Hip Joint Angle <input type="range" min="-45" max="45" value="0" class="slider" id="hipSlide">
+    Animation:
+    <button type="button" id="hipAnimationOnButton"> ON </button>
+    <button type="button" id="hipAnimationOffButton"> OFF </button>
+    <p>
+      Knee Joint Angle <input type="range" min="-45" max="45" value="0" class="slider" id="kneeSlide">
+    Animation:
+    <button type="button" id="kneeAnimationOnButton"> ON </button>
+    <button type="button" id="kneeAnimationOffButton"> OFF </button>
+    <p>
+      Ankle Joint Angle <input type="range" min="-45" max="45" value="0" class="slider" id="ankleSlide">
+    Animation:
+    <button type="button" id="ankleAnimationOnButton"> ON </button>
+    <button type="button" id="ankleAnimationOffButton"> OFF </button>
+
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="asg2.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Drawing.js"></script>
+    <script src = "Dodecahedron.js"></script>
+  </body>
+</html>
