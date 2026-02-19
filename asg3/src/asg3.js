@@ -439,14 +439,6 @@ function renderScene() {
 
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  var body = new Cube();
-  body.color = [0.76, 0.55, 0.33, 1.0];
-  body.textureNum = -1;
-  body.matrix.translate(-0.25, -0.25, -0.50);
-  body.matrix.scale(0.5, 0.5, 1.0);
-  body.render();
-
-
   var floor = new Cube();
   floor.color = [1, 0, 0, 1];
   floor.textureNum = 1;
