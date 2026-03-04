@@ -114,6 +114,7 @@ let u_Specular;
 let u_ShowNormals;
 let u_LightOn;
 let g_lightOn = true;
+let g_lightAnimOn = true;
 
 function setupWebGL() {
   canvas = document.getElementById('webgl');
@@ -282,9 +283,9 @@ function addActionsForHtmlUI() {
   document.getElementById("light-on").onclick   = function() { g_lightOn = true; };
   document.getElementById("light-off").onclick  = function() { g_lightOn = false; };
 
-  document.getElementById("lightSlideX").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightPos[0] = this.value/100; renderScene();}});
-  document.getElementById("lightSlideY").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightPos[1] = this.value/100; renderScene();}});
-  document.getElementById("lightSlideZ").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightPos[2] = this.value/100; renderScene();}});
+  document.getElementById("lightSlideX").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightAnimOn = false; g_lightPos[0] = this.value/100; renderScene();}});
+  document.getElementById("lightSlideY").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightAnimOn = false; g_lightPos[1] = this.value/100; renderScene();}});
+  document.getElementById("lightSlideZ").addEventListener("mousemove", function(ev) {if(ev.buttons==1) {g_lightAnimOn = false; g_lightPos[2] = this.value/100; renderScene();}});
 
 
 }
@@ -660,7 +661,9 @@ function tick() {
 }
 
 function updateAnimation() {
-  g_lightPos[0] = Math.cos(g_seconds);
+  if (g_lightAnimOn) {
+    g_lightPos[0] = Math.cos(g_seconds);
+  }
 }
 
 
