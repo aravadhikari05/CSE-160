@@ -2,10 +2,10 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const groundUrl = './src/ground.jpg';
-const wallUrl = './src/wall.png';
-const skyUrl = './src/sky.png';
-const pirateUrl = './src/Pirate Captain.glb';
+const groundUrl = './ground.jpg';
+const wallUrl = './wall.png';
+const skyUrl = './sky.png';
+const pirateUrl = './Pirate Captain.glb';
 
 //renderer setup
 const renderer = new THREE.WebGLRenderer({ antialias: true });
